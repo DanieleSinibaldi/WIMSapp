@@ -17,14 +17,26 @@
         else
             o="r"
         end
-        Room.create!(name: "Room #{r+1}",
-                     place: "Place #{p+1}",
-                     floor: (p+r+2)%2,
-                     nseat: 20+p+r+2,
-                     hopen: 8,
-                     minopen: 30,
-                     hclose: 19,
-                     minclose: 0,
-                     occupation: o)
+        if (p+1)<10
+            Room.create!(name: "Room #{r+1}",
+                         place: "Place 0#{p+1}",
+                         floor: (p+r+2)%2,
+                         nseat: 20+p+r+2,
+                         hopen: 8,
+                         minopen: 30,
+                         hclose: 19,
+                         minclose: 0,
+                         occupation: o)
+        else
+            Room.create!(name: "Room #{r+1}",
+                         place: "Place #{p+1}",
+                         floor: (p+r+2)%2,
+                         nseat: 20+p+r+2,
+                         hopen: 8,
+                         minopen: 30,
+                         hclose: 19,
+                         minclose: 0,
+                         occupation: o)
+        end
     end
 end

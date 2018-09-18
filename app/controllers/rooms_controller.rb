@@ -3,7 +3,7 @@ class RoomsController < ApplicationController
 
     # GET /places
     def places
-        @listOfPlaces = Room.select(:place).distinct
+        @listOfPlaces = Room.select(:place).distinct.order(place: :asc)
         json_response(@listOfPlaces)
     end
 
