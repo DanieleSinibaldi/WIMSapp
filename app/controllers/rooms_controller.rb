@@ -10,7 +10,7 @@ class RoomsController < ApplicationController
     # GET /places/:a_place
     def a_place
         #@listOfRooms = Room.where(place: "#{params[:a_place]}")
-        @listOfRooms = Room.where("place = ?", params[:a_place]).order(:place)
+        @listOfRooms = Room.where("place = ?", params[:a_place]).order(:name)
         json_response(@listOfRooms)
     end
 
