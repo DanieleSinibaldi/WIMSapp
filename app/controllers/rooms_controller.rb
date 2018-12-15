@@ -14,6 +14,12 @@ class RoomsController < ApplicationController
         json_response(@listOfRooms)
     end
 
+    # GET /rooms
+    def index
+        @listOfRooms = Room.all.order(:id)
+        json_response(@listOfRooms)
+    end
+
     # GET /rooms/:id
     def show
         json_response(@room)
