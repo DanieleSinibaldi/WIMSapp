@@ -10,6 +10,8 @@ class CreateRooms < ActiveRecord::Migration[5.2]
       t.integer :hclose
       t.integer :minclose
       t.string :occupation
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps
     end

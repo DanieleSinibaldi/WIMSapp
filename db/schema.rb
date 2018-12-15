@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2018_08_28_142546) do
     t.integer "hclose"
     t.integer "minclose"
     t.string "occupation"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

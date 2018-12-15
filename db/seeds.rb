@@ -17,6 +17,8 @@
         else
             o="r"
         end
+        lat= (rand(41.8850516..41.9083863)*10000000).round / 10000000.0
+        lon= (rand(12.4963763..12.5280384)*10000000).round / 10000000.0
         if (p+1)<10
             Room.create!(name: "Room #{r+1}",
                          place: "Place 0#{p+1}",
@@ -26,7 +28,9 @@
                          minopen: 30,
                          hclose: 19,
                          minclose: 0,
-                         occupation: o)
+                         occupation: o,
+                         latitude: lat,
+                         longitude: lon)
         else
             Room.create!(name: "Room #{r+1}",
                          place: "Place #{p+1}",
@@ -36,7 +40,9 @@
                          minopen: 30,
                          hclose: 19,
                          minclose: 0,
-                         occupation: o)
+                         occupation: o,
+                         latitude: lat,
+                         longitude: lon)
         end
     end
 end

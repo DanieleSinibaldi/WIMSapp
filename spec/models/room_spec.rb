@@ -13,4 +13,6 @@ RSpec.describe Room, type: :model do
   it { should validate_presence_of(:hclose) }
   it { should validate_presence_of(:minclose) }
   it { should validate_presence_of(:occupation) }
+  it { should validate_presence_of(:latitude) }
+  it { should validate_presence_of(:longitude) }
 end
