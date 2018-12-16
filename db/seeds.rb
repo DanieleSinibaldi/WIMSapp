@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 20.times do |p|
-    5.times do |r|
+    20.times do |r|
         o="g"
         n= rand(1..3)
         if n==1
